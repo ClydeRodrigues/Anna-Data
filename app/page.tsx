@@ -255,68 +255,62 @@ const SmartCropDemo = () => {
 
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-1 text-sm font-medium bg-gray-50 rounded-full p-1 border border-gray-200">
-              <button 
-                onClick={scrollToHero} 
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${
-                  activeView === 'home' 
-                    ? 'bg-emerald-600 text-white shadow-sm' 
+              <button
+                onClick={scrollToHero}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${activeView === 'home'
+                    ? 'bg-emerald-600 text-white shadow-sm'
                     : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
-                }`}
+                  }`}
               >
                 <Home className="w-4 h-4" />
                 <span className="hidden xl:inline">Home</span>
               </button>
-              <button 
-                onClick={scrollToDashboard} 
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${
-                  activeView === 'dashboard' 
-                    ? 'bg-emerald-600 text-white shadow-sm' 
+              <button
+                onClick={scrollToDashboard}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${activeView === 'dashboard'
+                    ? 'bg-emerald-600 text-white shadow-sm'
                     : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
-                }`}
+                  }`}
               >
                 <LayoutDashboard className="w-4 h-4" />
                 <span className="hidden xl:inline">Dashboard</span>
               </button>
-              <button 
-                onClick={scrollToAnalytics} 
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${
-                  activeView === 'analytics' 
-                    ? 'bg-emerald-600 text-white shadow-sm' 
+              <button
+                onClick={scrollToAnalytics}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${activeView === 'analytics'
+                    ? 'bg-emerald-600 text-white shadow-sm'
                     : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
-                }`}
+                  }`}
               >
                 <BarChart3 className="w-4 h-4" />
                 <span className="hidden xl:inline">Analytics</span>
               </button>
-              <button 
-                onClick={scrollToControls} 
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${
-                  activeView === 'controls' 
-                    ? 'bg-emerald-600 text-white shadow-sm' 
+              <button
+                onClick={scrollToControls}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${activeView === 'controls'
+                    ? 'bg-emerald-600 text-white shadow-sm'
                     : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
-                }`}
+                  }`}
               >
                 <Settings className="w-4 h-4" />
                 <span className="hidden xl:inline">Controls</span>
               </button>
-              <button 
-                onClick={scrollToAlerts} 
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${
-                  activeView === 'alerts' 
-                    ? 'bg-emerald-600 text-white shadow-sm' 
+              <button
+                onClick={scrollToAlerts}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${activeView === 'alerts'
+                    ? 'bg-emerald-600 text-white shadow-sm'
                     : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
-                }`}
+                  }`}
               >
                 <Bell className="w-4 h-4" />
                 <span className="hidden xl:inline">Alerts</span>
               </button>
-              <button 
-                onClick={scrollToLogs} 
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${
-                  activeView === 'logs' 
-                    ? 'bg-emerald-600 text-white shadow-sm' 
+              <button
+                onClick={scrollToLogs}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${activeView === 'logs'
+                    ? 'bg-emerald-600 text-white shadow-sm'
                     : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
-                }`}
+                  }`}
               >
                 <FileText className="w-4 h-4" />
                 <span className="hidden xl:inline">Logs</span>
@@ -326,11 +320,10 @@ const SmartCropDemo = () => {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setIsSimulating(!isSimulating)}
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-full font-medium transition-all text-sm border ${
-                  isSimulating
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-full font-medium transition-all text-sm border ${isSimulating
                     ? "bg-emerald-50 text-emerald-700 border-emerald-200"
                     : "bg-amber-50 text-amber-700 border-amber-200"
-                }`}
+                  }`}
               >
                 {isSimulating ? <PauseCircle className="w-4 h-4" /> : <PlayCircle className="w-4 h-4" />}
                 <span className="hidden sm:inline">{isSimulating ? "Pause" : "Resume"}</span>
@@ -571,15 +564,15 @@ const SmartCropDemo = () => {
               <div className="flex gap-4 mt-8">
                 <button
                   onClick={() => scrollGallery('left')}
-                  className="w-12 h-12 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  className="w-12 h-12 rounded-full border-2 border-gray-300 bg-white flex items-center justify-center hover:bg-gray-100 hover:border-emerald-500 transition-all duration-200 shadow-sm"
                 >
-                  <ChevronLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+                  <ChevronLeft className="w-5 h-5 text-gray-700" />
                 </button>
                 <button
                   onClick={() => scrollGallery('right')}
-                  className="w-12 h-12 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 flex items-center justify-center hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors shadow-lg"
+                  className="w-12 h-12 rounded-full border-2 border-gray-300 bg-white flex items-center justify-center hover:bg-gray-100 hover:border-emerald-500 transition-all duration-200 shadow-sm"
                 >
-                  <ChevronRight className="w-5 h-5" />
+                  <ChevronRight className="w-5 h-5 text-gray-700" />
                 </button>
               </div>
             </div>
@@ -738,75 +731,75 @@ const SmartCropDemo = () => {
               <>
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">Dashboard</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div
-                  className={`${moistureStatus.bg} rounded-xl shadow-sm p-8 border border-emerald-200 relative overflow-hidden`}
-                >
-                  <div className="absolute -top-8 -right-8 opacity-10">
-                    <img
-                      src="/plant-leaves-green-agriculture.jpg"
-                      alt="Decorative leaves"
-                      className="w-24 h-24 rounded-full object-cover"
-                    />
-                  </div>
-                  <div className="text-center relative z-10">
-                    <Droplets className={`w-14 h-14 mx-auto mb-3 ${moistureStatus.color}`} />
-                    <h2 className="text-lg font-semibold text-gray-800 mb-2">Soil Moisture</h2>
-                    <div className={`text-6xl font-bold ${moistureStatus.color} mb-3`}>
-                      {sensorData.soilMoisture.toFixed(1)}%
+                  <div
+                    className={`${moistureStatus.bg} rounded-xl shadow-sm p-8 border border-emerald-200 relative overflow-hidden`}
+                  >
+                    <div className="absolute -top-8 -right-8 opacity-10">
+                      <img
+                        src="/plant-leaves-green-agriculture.jpg"
+                        alt="Decorative leaves"
+                        className="w-24 h-24 rounded-full object-cover"
+                      />
                     </div>
-                    <div
-                      className={`inline-block px-5 py-2 rounded-full ${moistureStatus.color} bg-white font-semibold text-base shadow-xs border border-current border-opacity-20`}
-                    >
-                      {moistureStatus.text}
+                    <div className="text-center relative z-10">
+                      <Droplets className={`w-14 h-14 mx-auto mb-3 ${moistureStatus.color}`} />
+                      <h2 className="text-lg font-semibold text-gray-800 mb-2">Soil Moisture</h2>
+                      <div className={`text-6xl font-bold ${moistureStatus.color} mb-3`}>
+                        {sensorData.soilMoisture.toFixed(1)}%
+                      </div>
+                      <div
+                        className={`inline-block px-5 py-2 rounded-full ${moistureStatus.color} bg-white font-semibold text-base shadow-xs border border-current border-opacity-20`}
+                      >
+                        {moistureStatus.text}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="bg-white rounded-xl shadow-sm p-6 border border-amber-200 relative overflow-hidden">
-                  <div className="absolute -bottom-4 -right-4 opacity-8">
-                    <Leaf className="w-20 h-20 text-amber-600" />
+                  <div className="bg-white rounded-xl shadow-sm p-6 border border-amber-200 relative overflow-hidden">
+                    <div className="absolute -bottom-4 -right-4 opacity-8">
+                      <Leaf className="w-20 h-20 text-amber-600" />
+                    </div>
+                    <Thermometer className="w-11 h-11 text-amber-700 mb-3" />
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Temperature</h3>
+                    <div className="text-5xl font-bold text-amber-700">{sensorData.temperature.toFixed(1)}°C</div>
                   </div>
-                  <Thermometer className="w-11 h-11 text-amber-700 mb-3" />
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Temperature</h3>
-                  <div className="text-5xl font-bold text-amber-700">{sensorData.temperature.toFixed(1)}°C</div>
-                </div>
 
-                <div className="bg-white rounded-xl shadow-sm p-6 border border-blue-200 relative overflow-hidden">
-                  <div className="absolute -top-6 -left-6 opacity-8">
-                    <Leaf className="w-24 h-24 text-blue-400 rotate-45" />
+                  <div className="bg-white rounded-xl shadow-sm p-6 border border-blue-200 relative overflow-hidden">
+                    <div className="absolute -top-6 -left-6 opacity-8">
+                      <Leaf className="w-24 h-24 text-blue-400 rotate-45" />
+                    </div>
+                    <Wind className="w-11 h-11 text-blue-700 mb-3" />
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2">Humidity</h3>
+                    <div className="text-5xl font-bold text-blue-700">{sensorData.humidity.toFixed(1)}%</div>
                   </div>
-                  <Wind className="w-11 h-11 text-blue-700 mb-3" />
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Humidity</h3>
-                  <div className="text-5xl font-bold text-blue-700">{sensorData.humidity.toFixed(1)}%</div>
-                </div>
 
-                <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl shadow-sm p-8 border border-emerald-500 text-white md:col-span-2 relative overflow-hidden">
-                  <div className="absolute opacity-15 pointer-events-none" style={{ top: "10px", right: "10px" }}>
-                    <img
-                      src="/rice-crop-plant-recommendation-agriculture.jpg"
-                      alt="Crop recommendations"
-                      className="w-20 h-20 rounded-full object-cover"
-                    />
+                  <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl shadow-sm p-8 border border-emerald-500 text-white md:col-span-2 relative overflow-hidden">
+                    <div className="absolute opacity-15 pointer-events-none" style={{ top: "10px", right: "10px" }}>
+                      <img
+                        src="/rice-crop-plant-recommendation-agriculture.jpg"
+                        alt="Crop recommendations"
+                        className="w-20 h-20 rounded-full object-cover"
+                      />
+                    </div>
+                    <Leaf className="w-11 h-11 mb-3" />
+                    <h3 className="text-xl font-semibold mb-3">Recommended Crop</h3>
+                    <div className="text-5xl font-bold uppercase mb-3">{prediction.recommendedCrop}</div>
+                    <div className="bg-white/15 backdrop-blur rounded-lg px-4 py-2 inline-block">
+                      <span className="text-base font-medium">Confidence: {(prediction.confidence * 100).toFixed(1)}%</span>
+                    </div>
                   </div>
-                  <Leaf className="w-11 h-11 mb-3" />
-                  <h3 className="text-xl font-semibold mb-3">Recommended Crop</h3>
-                  <div className="text-5xl font-bold uppercase mb-3">{prediction.recommendedCrop}</div>
-                  <div className="bg-white/15 backdrop-blur rounded-lg px-4 py-2 inline-block">
-                    <span className="text-base font-medium">Confidence: {(prediction.confidence * 100).toFixed(1)}%</span>
-                  </div>
-                </div>
 
-                <div
-                  className={`rounded-xl shadow-sm p-8 border relative overflow-hidden ${isPumpOn ? "bg-gradient-to-br from-emerald-500 to-emerald-600 border-emerald-600 text-white" : "bg-white border-amber-200 text-gray-800"}`}
-                >
-                  <div className="absolute -bottom-6 -right-6 opacity-10 pointer-events-none">
-                    <Leaf className="w-24 h-24" />
+                  <div
+                    className={`rounded-xl shadow-sm p-8 border relative overflow-hidden ${isPumpOn ? "bg-gradient-to-br from-emerald-500 to-emerald-600 border-emerald-600 text-white" : "bg-white border-amber-200 text-gray-800"}`}
+                  >
+                    <div className="absolute -bottom-6 -right-6 opacity-10 pointer-events-none">
+                      <Leaf className="w-24 h-24" />
+                    </div>
+                    <Power className="w-11 h-11 mb-3" />
+                    <h3 className="text-xl font-semibold mb-2">Irrigation Pump</h3>
+                    <div className="text-4xl font-bold">{isPumpOn ? "ON" : "OFF"}</div>
                   </div>
-                  <Power className="w-11 h-11 mb-3" />
-                  <h3 className="text-xl font-semibold mb-2">Irrigation Pump</h3>
-                  <div className="text-4xl font-bold">{isPumpOn ? "ON" : "OFF"}</div>
                 </div>
-              </div>
               </>
             )}
 
@@ -814,86 +807,86 @@ const SmartCropDemo = () => {
               <>
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">Analytics</h2>
                 <div ref={analyticsRef} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="bg-white rounded-xl shadow-sm p-6 border border-amber-200 relative overflow-hidden">
-                  <div className="absolute -top-10 -right-10 opacity-8">
-                    <img
-                      src="/nutrients-soil-npk-fertilizer.jpg"
-                      alt="Nutrients"
-                      className="w-28 h-28 rounded-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
-                    <Zap className="w-7 h-7 text-emerald-700" />
-                    Soil Nutrients (NPK)
-                  </h3>
-                  <div className="space-y-6">
-                    <div>
-                      <div className="flex justify-between mb-2">
-                        <span className="text-base font-medium text-gray-700">Nitrogen (N)</span>
-                        <span className="text-xl font-bold text-emerald-700">{sensorData.N.toFixed(1)}</span>
-                      </div>
-                      <div className="w-full bg-emerald-100 rounded-full h-3">
-                        <div
-                          className="bg-emerald-600 h-3 rounded-full transition-all duration-500"
-                          style={{ width: `${(sensorData.N / 140) * 100}%` }}
-                        />
-                      </div>
+                  <div className="bg-white rounded-xl shadow-sm p-6 border border-amber-200 relative overflow-hidden">
+                    <div className="absolute -top-10 -right-10 opacity-8">
+                      <img
+                        src="/nutrients-soil-npk-fertilizer.jpg"
+                        alt="Nutrients"
+                        className="w-28 h-28 rounded-full object-cover"
+                      />
                     </div>
-                    <div>
-                      <div className="flex justify-between mb-2">
-                        <span className="text-base font-medium text-gray-700">Phosphorus (P)</span>
-                        <span className="text-xl font-bold text-amber-700">{sensorData.P.toFixed(1)}</span>
-                      </div>
-                      <div className="w-full bg-amber-100 rounded-full h-3">
-                        <div
-                          className="bg-amber-600 h-3 rounded-full transition-all duration-500"
-                          style={{ width: `${(sensorData.P / 145) * 100}%` }}
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between mb-2">
-                        <span className="text-base font-medium text-gray-700">Potassium (K)</span>
-                        <span className="text-xl font-bold text-yellow-700">{sensorData.K.toFixed(1)}</span>
-                      </div>
-                      <div className="w-full bg-yellow-100 rounded-full h-3">
-                        <div
-                          className="bg-yellow-600 h-3 rounded-full transition-all duration-500"
-                          style={{ width: `${(sensorData.K / 205) * 100}%` }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-xl shadow-sm p-6 border border-emerald-200 relative overflow-hidden">
-                  <div className="absolute -bottom-8 -left-8 opacity-10">
-                    <Leaf className="w-32 h-32 text-emerald-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-6">Recent History</h3>
-                  <div className="space-y-3">
-                    {history
-                      .slice(-5)
-                      .reverse()
-                      .map((item, idx) => (
-                        <div key={idx} className="bg-emerald-50 rounded-lg p-4 border border-emerald-100">
-                          <div className="text-xs text-emerald-700 font-medium mb-2">
-                            {item.timestamp?.toLocaleTimeString()}
-                          </div>
-                          <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
-                            <div>
-                              Moisture:{" "}
-                              <span className="font-semibold text-emerald-700">{item.soilMoisture?.toFixed(1)}%</span>
-                            </div>
-                            <div>
-                              Temp: <span className="font-semibold text-amber-700">{item.temperature?.toFixed(1)}°C</span>
-                            </div>
-                          </div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-3">
+                      <Zap className="w-7 h-7 text-emerald-700" />
+                      Soil Nutrients (NPK)
+                    </h3>
+                    <div className="space-y-6">
+                      <div>
+                        <div className="flex justify-between mb-2">
+                          <span className="text-base font-medium text-gray-700">Nitrogen (N)</span>
+                          <span className="text-xl font-bold text-emerald-700">{sensorData.N.toFixed(1)}</span>
                         </div>
-                      ))}
+                        <div className="w-full bg-emerald-100 rounded-full h-3">
+                          <div
+                            className="bg-emerald-600 h-3 rounded-full transition-all duration-500"
+                            style={{ width: `${(sensorData.N / 140) * 100}%` }}
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between mb-2">
+                          <span className="text-base font-medium text-gray-700">Phosphorus (P)</span>
+                          <span className="text-xl font-bold text-amber-700">{sensorData.P.toFixed(1)}</span>
+                        </div>
+                        <div className="w-full bg-amber-100 rounded-full h-3">
+                          <div
+                            className="bg-amber-600 h-3 rounded-full transition-all duration-500"
+                            style={{ width: `${(sensorData.P / 145) * 100}%` }}
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between mb-2">
+                          <span className="text-base font-medium text-gray-700">Potassium (K)</span>
+                          <span className="text-xl font-bold text-yellow-700">{sensorData.K.toFixed(1)}</span>
+                        </div>
+                        <div className="w-full bg-yellow-100 rounded-full h-3">
+                          <div
+                            className="bg-yellow-600 h-3 rounded-full transition-all duration-500"
+                            style={{ width: `${(sensorData.K / 205) * 100}%` }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl shadow-sm p-6 border border-emerald-200 relative overflow-hidden">
+                    <div className="absolute -bottom-8 -left-8 opacity-10">
+                      <Leaf className="w-32 h-32 text-emerald-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-6">Recent History</h3>
+                    <div className="space-y-3">
+                      {history
+                        .slice(-5)
+                        .reverse()
+                        .map((item, idx) => (
+                          <div key={idx} className="bg-emerald-50 rounded-lg p-4 border border-emerald-100">
+                            <div className="text-xs text-emerald-700 font-medium mb-2">
+                              {item.timestamp?.toLocaleTimeString()}
+                            </div>
+                            <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
+                              <div>
+                                Moisture:{" "}
+                                <span className="font-semibold text-emerald-700">{item.soilMoisture?.toFixed(1)}%</span>
+                              </div>
+                              <div>
+                                Temp: <span className="font-semibold text-amber-700">{item.temperature?.toFixed(1)}°C</span>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                    </div>
                   </div>
                 </div>
-              </div>
               </>
             )}
 
@@ -901,65 +894,65 @@ const SmartCropDemo = () => {
               <>
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">Controls</h2>
                 <div ref={controlsRef} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="bg-white rounded-xl shadow-sm p-8 border border-emerald-200 relative overflow-hidden">
-                  <div className="absolute -top-8 -right-8 opacity-10">
-                    <Leaf className="w-28 h-28 text-emerald-600 rotate-45" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-6">Irrigation Control</h3>
-                  <div className="space-y-6">
-                    <label className="flex items-center justify-between p-4 bg-emerald-50 rounded-lg cursor-pointer border border-emerald-100">
-                      <span className="text-base font-medium text-emerald-800">Automatic Mode</span>
-                      <input
-                        type="checkbox"
-                        checked={autoMode}
-                        onChange={(e) => setAutoMode(e.target.checked)}
-                        className="w-5 h-5 accent-emerald-600"
-                      />
-                    </label>
-
-                    <button
-                      onClick={togglePump}
-                      disabled={autoMode}
-                      className={`w-full py-8 rounded-lg font-bold text-2xl transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed ${isPumpOn ? "bg-emerald-600 text-white shadow-sm" : "bg-amber-100 text-amber-800 border border-amber-200"}`}
-                    >
-                      <Power className="w-12 h-12 mx-auto mb-2" />
-                      {isPumpOn ? "PUMP ON" : "PUMP OFF"}
-                    </button>
-
-                    <div className="text-center text-gray-700 font-medium bg-amber-50 py-3 rounded-lg border border-amber-100 text-sm">
-                      {autoMode ? "🌾 Automatic irrigation active" : "👨‍🌾 Manual control enabled"}
+                  <div className="bg-white rounded-xl shadow-sm p-8 border border-emerald-200 relative overflow-hidden">
+                    <div className="absolute -top-8 -right-8 opacity-10">
+                      <Leaf className="w-28 h-28 text-emerald-600 rotate-45" />
                     </div>
-                  </div>
-                </div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-6">Irrigation Control</h3>
+                    <div className="space-y-6">
+                      <label className="flex items-center justify-between p-4 bg-emerald-50 rounded-lg cursor-pointer border border-emerald-100">
+                        <span className="text-base font-medium text-emerald-800">Automatic Mode</span>
+                        <input
+                          type="checkbox"
+                          checked={autoMode}
+                          onChange={(e) => setAutoMode(e.target.checked)}
+                          className="w-5 h-5 accent-emerald-600"
+                        />
+                      </label>
 
-                <div className="bg-white rounded-xl shadow-sm p-8 border border-amber-200 relative overflow-hidden">
-                  <div className="absolute -bottom-10 -right-10 opacity-8">
-                    <img
-                      src="/farm-field-settings-configuration.jpg"
-                      alt="Settings"
-                      className="w-32 h-32 rounded-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-6">System Settings</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Moisture Threshold</label>
-                      <input type="range" min="20" max="60" defaultValue="35" className="w-full accent-emerald-600" />
-                      <div className="text-center text-sm text-emerald-700 font-medium mt-1 bg-emerald-50 py-1 rounded">
-                        35%
+                      <button
+                        onClick={togglePump}
+                        disabled={autoMode}
+                        className={`w-full py-8 rounded-lg font-bold text-2xl transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed ${isPumpOn ? "bg-emerald-600 text-white shadow-sm" : "bg-amber-100 text-amber-800 border border-amber-200"}`}
+                      >
+                        <Power className="w-12 h-12 mx-auto mb-2" />
+                        {isPumpOn ? "PUMP ON" : "PUMP OFF"}
+                      </button>
+
+                      <div className="text-center text-gray-700 font-medium bg-amber-50 py-3 rounded-lg border border-amber-100 text-sm">
+                        {autoMode ? "🌾 Automatic irrigation active" : "👨‍🌾 Manual control enabled"}
                       </div>
                     </div>
+                  </div>
 
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Update Frequency</label>
-                      <select className="w-full p-3 rounded-lg border border-amber-200 bg-white focus:border-emerald-500 focus:outline-none text-sm text-gray-700">
-                        <option>Every 3 seconds</option>
-                        <option>Every 5 seconds</option>
-                      </select>
+                  <div className="bg-white rounded-xl shadow-sm p-8 border border-amber-200 relative overflow-hidden">
+                    <div className="absolute -bottom-10 -right-10 opacity-8">
+                      <img
+                        src="/farm-field-settings-configuration.jpg"
+                        alt="Settings"
+                        className="w-32 h-32 rounded-full object-cover"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-6">System Settings</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">Moisture Threshold</label>
+                        <input type="range" min="20" max="60" defaultValue="35" className="w-full accent-emerald-600" />
+                        <div className="text-center text-sm text-emerald-700 font-medium mt-1 bg-emerald-50 py-1 rounded">
+                          35%
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">Update Frequency</label>
+                        <select className="w-full p-3 rounded-lg border border-amber-200 bg-white focus:border-emerald-500 focus:outline-none text-sm text-gray-700">
+                          <option>Every 3 seconds</option>
+                          <option>Every 5 seconds</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
               </>
             )}
 
@@ -967,31 +960,31 @@ const SmartCropDemo = () => {
               <>
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">Alerts</h2>
                 <div ref={alertsRef} className="space-y-4">
-                {alerts.map((alert) => (
-                  <div
-                    key={alert.id}
-                    className={`p-4 rounded-lg border flex gap-3 ${alert.type === "warning"
-                      ? "bg-red-50 border-red-200"
-                      : alert.type === "success"
-                        ? "bg-emerald-50 border-emerald-200"
-                        : "bg-blue-50 border-blue-200"
-                      }`}
-                  >
-                    <AlertCircle
-                      className={`w-5 h-5 flex-shrink-0 mt-0.5 ${alert.type === "warning"
-                        ? "text-red-600"
+                  {alerts.map((alert) => (
+                    <div
+                      key={alert.id}
+                      className={`p-4 rounded-lg border flex gap-3 ${alert.type === "warning"
+                        ? "bg-red-50 border-red-200"
                         : alert.type === "success"
-                          ? "text-emerald-600"
-                          : "text-blue-600"
+                          ? "bg-emerald-50 border-emerald-200"
+                          : "bg-blue-50 border-blue-200"
                         }`}
-                    />
-                    <div className="flex-1">
-                      <p className="text-gray-800 font-medium">{alert.message}</p>
-                      <p className="text-xs text-gray-600 mt-1">{alert.time?.toLocaleTimeString()}</p>
+                    >
+                      <AlertCircle
+                        className={`w-5 h-5 flex-shrink-0 mt-0.5 ${alert.type === "warning"
+                          ? "text-red-600"
+                          : alert.type === "success"
+                            ? "text-emerald-600"
+                            : "text-blue-600"
+                          }`}
+                      />
+                      <div className="flex-1">
+                        <p className="text-gray-800 font-medium">{alert.message}</p>
+                        <p className="text-xs text-gray-600 mt-1">{alert.time?.toLocaleTimeString()}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
               </>
             )}
 
@@ -999,24 +992,24 @@ const SmartCropDemo = () => {
               <>
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">System Logs</h2>
                 <div ref={logsRef} className="bg-white rounded-xl shadow-sm p-6 border border-emerald-200">
-                <div className="absolute -bottom-8 -right-8 opacity-8">
-                  <Leaf className="w-28 h-28 text-emerald-600" />
+                  <div className="absolute -bottom-8 -right-8 opacity-8">
+                    <Leaf className="w-28 h-28 text-emerald-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+                    <Database className="w-8 h-8 text-emerald-700" />
+                    System Logs
+                  </h3>
+                  <div className="space-y-2 font-mono text-sm bg-gray-50 p-4 rounded-lg border border-gray-200 max-h-96 overflow-y-auto">
+                    {history.slice(-10).map((entry, idx) => (
+                      <div key={idx} className="text-gray-700">
+                        <span className="text-emerald-700">[{entry.timestamp?.toLocaleTimeString()}]</span> Moisture:{" "}
+                        <span className="text-amber-700">{entry.soilMoisture?.toFixed(1)}%</span> | Temp:{" "}
+                        <span className="text-orange-700">{entry.temperature?.toFixed(1)}°C</span> | Humidity:{" "}
+                        <span className="text-blue-700">{entry.humidity?.toFixed(1)}%</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                  <Database className="w-8 h-8 text-emerald-700" />
-                  System Logs
-                </h3>
-                <div className="space-y-2 font-mono text-sm bg-gray-50 p-4 rounded-lg border border-gray-200 max-h-96 overflow-y-auto">
-                  {history.slice(-10).map((entry, idx) => (
-                    <div key={idx} className="text-gray-700">
-                      <span className="text-emerald-700">[{entry.timestamp?.toLocaleTimeString()}]</span> Moisture:{" "}
-                      <span className="text-amber-700">{entry.soilMoisture?.toFixed(1)}%</span> | Temp:{" "}
-                      <span className="text-orange-700">{entry.temperature?.toFixed(1)}°C</span> | Humidity:{" "}
-                      <span className="text-blue-700">{entry.humidity?.toFixed(1)}%</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
               </>
             )}
           </div>
