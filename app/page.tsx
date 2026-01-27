@@ -602,7 +602,7 @@ const SmartCropDemo = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-white text-sm">
                     <MapPin className="w-4 h-4" />
-                    <span>Manitoba, Canada</span>
+                    <span>India</span>
                   </div>
 
                   <div className="flex items-center gap-3">
