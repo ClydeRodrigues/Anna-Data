@@ -244,8 +244,8 @@ const SmartCropDemo = () => {
       <div className="max-w-7xl mx-auto pt-6 px-4 relative z-50">
         <div className="bg-white rounded-2xl p-4 border border-gray-200 flex items-center justify-between shadow-md transition-all duration-300">
           <div className="flex items-center gap-3">
-            <div className="bg-emerald-600 p-2 rounded-lg text-white shadow-lg shadow-emerald-600/20">
-              <Leaf className="w-6 h-6" fill="currentColor" />
+            <div className="w-12 h-12 rounded-lg overflow-hidden shadow-lg">
+              <img src="/logo.png" alt="Annadata Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900 tracking-tight">Annadata</h1>
@@ -258,8 +258,8 @@ const SmartCropDemo = () => {
               <button
                 onClick={scrollToHero}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${activeView === 'home'
-                    ? 'bg-emerald-600 text-white shadow-sm'
-                    : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
+                  ? 'bg-emerald-600 text-white shadow-sm'
+                  : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
                   }`}
               >
                 <Home className="w-4 h-4" />
@@ -268,8 +268,8 @@ const SmartCropDemo = () => {
               <button
                 onClick={scrollToDashboard}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${activeView === 'dashboard'
-                    ? 'bg-emerald-600 text-white shadow-sm'
-                    : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
+                  ? 'bg-emerald-600 text-white shadow-sm'
+                  : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
                   }`}
               >
                 <LayoutDashboard className="w-4 h-4" />
@@ -278,8 +278,8 @@ const SmartCropDemo = () => {
               <button
                 onClick={scrollToAnalytics}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${activeView === 'analytics'
-                    ? 'bg-emerald-600 text-white shadow-sm'
-                    : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
+                  ? 'bg-emerald-600 text-white shadow-sm'
+                  : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
                   }`}
               >
                 <BarChart3 className="w-4 h-4" />
@@ -288,8 +288,8 @@ const SmartCropDemo = () => {
               <button
                 onClick={scrollToControls}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${activeView === 'controls'
-                    ? 'bg-emerald-600 text-white shadow-sm'
-                    : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
+                  ? 'bg-emerald-600 text-white shadow-sm'
+                  : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
                   }`}
               >
                 <Settings className="w-4 h-4" />
@@ -298,8 +298,8 @@ const SmartCropDemo = () => {
               <button
                 onClick={scrollToAlerts}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${activeView === 'alerts'
-                    ? 'bg-emerald-600 text-white shadow-sm'
-                    : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
+                  ? 'bg-emerald-600 text-white shadow-sm'
+                  : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
                   }`}
               >
                 <Bell className="w-4 h-4" />
@@ -308,8 +308,8 @@ const SmartCropDemo = () => {
               <button
                 onClick={scrollToLogs}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all ${activeView === 'logs'
-                    ? 'bg-emerald-600 text-white shadow-sm'
-                    : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
+                  ? 'bg-emerald-600 text-white shadow-sm'
+                  : 'text-gray-700 hover:bg-gray-100 hover:text-emerald-600'
                   }`}
               >
                 <FileText className="w-4 h-4" />
@@ -321,8 +321,8 @@ const SmartCropDemo = () => {
               <button
                 onClick={() => setIsSimulating(!isSimulating)}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-full font-medium transition-all text-sm border ${isSimulating
-                    ? "bg-emerald-50 text-emerald-700 border-emerald-200"
-                    : "bg-amber-50 text-amber-700 border-amber-200"
+                  ? "bg-emerald-50 text-emerald-700 border-emerald-200"
+                  : "bg-amber-50 text-amber-700 border-amber-200"
                   }`}
               >
                 {isSimulating ? <PauseCircle className="w-4 h-4" /> : <PlayCircle className="w-4 h-4" />}
